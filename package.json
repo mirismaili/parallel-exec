@@ -1,0 +1,32 @@
+{
+  "name": "parallel-exec",
+  "version": "1.1.0",
+  "bin": {
+    "parallel": "src/main.js"
+  },
+  "description": "Simply run commands in parallel. Kill other processes if one fails.",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirismaili/parallel-exec"
+  },
+  "license": "MIT",
+  "author": "S. Mahdi Mir-Ismaili <s.m.mirismaili@gmail.com>",
+  "type": "module",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "patch-version": "npm version patch --no-git-tag-version",
+    "increase-minor-version": "npm version minor --no-git-tag-version",
+    "increase-major-version": "npm version major --no-git-tag-version",
+    "tag-this-version": "node -e \"require('child_process').execSync('git tag v' + require('./package.json').version)\""
+  },
+  "dependencies": {
+    "anstyle": "2.0.3"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16"
+  }
+}
